@@ -13,6 +13,12 @@ library(tidyverse)
 
 ```{r load-data, message=FALSE}
 plastic_waste <- read_csv("data/plastic-waste.csv")
+
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
+  geom_histogram(binwidth = 0.2)
+
+plastic_waste %>%
+  filter(plastic_waste_per_cap > 3.5)
 ```
 
 Commençons par filtrer les données pour retirer le point représenté par Trinité et Tobago (TTO) qui est un outlier.
@@ -28,7 +34,13 @@ plastic_waste <- plastic_waste %>%
 ### Exercise 1
 
 ```{r plastic-waste-continent}
-# insert code here
+
+ggplot(plastic_waste, aes( x = plastic_waste_per_cap )) +
+  geom_histogram(binwidth = 0.25) +
+  labs(title = "Distribution de la quatité de déchets par habitant classée par continent",
+       x = "Quantité de déchets par habitant",
+       y = "Nombre") 
+  
 ```
 
 ### Exercise 2
