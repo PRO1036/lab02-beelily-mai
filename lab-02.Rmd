@@ -35,13 +35,15 @@ plastic_waste <- plastic_waste %>%
 
 ```{r plastic-waste-continent}
 
-ggplot(plastic_waste, aes( x = plastic_waste_per_cap )) +
+ggplot(plastic_waste, aes(x = plastic_waste_per_cap )) +
   geom_histogram(binwidth = 0.25) +
-  labs(title = "Distribution de la quatité de déchets par habitant classée par continent",
-       x = "Quantité de déchets par habitant",
-       y = "Nombre") 
+  facet_wrap(~ continent) +
+  labs(title = "Distribution de la quatité de déchets plastiques par habitant classée par continent",
+       x = "Quantité de déchets plastiques par habitant (kg/pers)",
+       y = "Nombre de pays") 
   
 ```
+Avec la distribution suivante, on peut observer que la majorité des pays d'Asie, d'Europe, d'Amérique du Sud et d'Amérique du Nord semblent une quantité de déchets par habitant qui tourne autour de 0,25 kg/pers. On voit qu'en Afrique, la majorité des pays ont une quantité de déchets plastiques qui se retrouvent proche de 0,00 kg/pers. 
 
 ### Exercise 2
 
