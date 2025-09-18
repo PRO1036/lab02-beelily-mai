@@ -64,18 +64,32 @@ plastiques qui se retrouvent proche de 0,00 kg/pers.
 ### Exercise 2
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x = plastic_waste_per_cap,
+                          color = continent,
+                          fill = continent)) + 
+  geom_density(adjust = 2,
+               alpha = 0.4) + 
+  labs(title = "Quantité de déchets plastiques selon la densité par continent",
+       x = "Quantité de déchets plastiques par habitant (kg/pers)",
+       y = "Densité par continent",
+       color = "Continent",
+       fill = "Continent")
 ```
 
+![](lab-02_files/figure-gfm/plastic-waste-density-1.png)<!-- -->
+
 Réponse à la question…
+
+Le réglage de la couleur (color et fill) ne sont pas au même endroit que
+la transparence (alpha) parce qu’on assigne directement sur les
+variables du jeu de donnée la couleur tandis que la transparence est
+associée au graphique lui-même et non à une variable en particulier. On
+ne peut pas vraiment mettre une variable plus transparente ou moins
+transparente. On peut lui assigner toutefois une couleur.
 
 ### Exercise 3
 
 Boxplot:
-
-``` r
-# insert code here
-```
 
 Violin plot:
 
