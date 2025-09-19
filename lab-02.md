@@ -147,19 +147,36 @@ les pays d’Europe.
 ### Exercise 5
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x = plastic_waste_per_cap,
+                          y = total_pop)) + 
+  geom_point() +
+  labs(title = "Relation entre la quantité de déchets plastiques par habitant et le nombre total d'habitants",
+       x = "Quantité de déchets plastiques par habitant",
+       y = "Nombre total d'habitants")
 ```
+
+    ## Warning: Removed 10 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](lab-02_files/figure-gfm/plastic-waste-population-total-1.png)<!-- -->
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x = plastic_waste_per_cap,
+                          y = coastal_pop)) +
+         geom_point() +
+  labs(title = "Relation entre la quantité de déchets plastiques par habitant et le nombre total d'habitants vivant près d'une côte",
+       x = "Quantité de déchets plastiques par habitant",
+       y = "Nombre total d'habitants vivant près d'une côte")
 ```
 
-Réponse à la question…
+![](lab-02_files/figure-gfm/plastic-waste-population-coastal-1.png)<!-- -->
+
+Réponse à la question… Il semble avoir une relation plus forte dans le
+premier graphe que le deuxième graphe. En effet, les données sont
+beaucoup plus uniformes dans le graphe 1 que les graphe 2 où l’on
+retrouve plus de données aberrantes et les points sont beaucoup plus
+espacés.
 
 ## Conclusion
 
 Recréez la visualisation:
-
-``` r
-# insert code here
-```
