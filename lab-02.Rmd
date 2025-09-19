@@ -92,10 +92,21 @@ Les violin plots nous permettent de voir où se situe le plus de pays par rappor
 
 
 ```{r plastic-waste-mismanaged}
-# insert code here
+ggplot(plastic_waste, aes(x = plastic_waste_per_cap,
+                          y = mismanaged_plastic_waste_per_cap,
+                          color = continent)) + 
+  geom_point() + 
+  labs(title = "Relation entre la quantité de déchet et la quantité de déchets non gérés par habitant",
+       x = "Quantité de déchets par habitant",
+       y = "Quantité de déchets non gérés par habitant",
+       color = "Continent")
 ```
 
 Réponse à la question...
+La relation est positive puisque les variables augmentent ensemble. Toutefois, les points sont assez dispersés, donc il est difficile de trouver une relation claire entre les points. Elle semble être plus ou moins linéaire.
+
+Lorsqu'on colorie les points selon les continents, on voit plus clairement l'augmentation des points selon les continents. Par exemple, on voit que l'Afrique a des points qui augmentent beaucoup plus vite que les pays d'Europe. 
+
 
 ### Exercise 5
 
