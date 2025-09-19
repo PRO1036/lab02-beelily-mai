@@ -91,13 +91,33 @@ transparente. On peut lui assigner toutefois une couleur.
 
 Boxplot:
 
+``` r
+ggplot(plastic_waste, aes(x = continent,
+                          y = plastic_waste_per_cap)) + 
+  geom_boxplot()
+```
+
+![](lab-02_files/figure-gfm/plastic-waste-boxplot-1.png)<!-- -->
+
 Violin plot:
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x = continent,
+                          y = plastic_waste_per_cap)) +
+  geom_violin()
 ```
 
+![](lab-02_files/figure-gfm/plastic-waste-violin-1.png)<!-- -->
+
 Réponse à la question…
+
+Les violin plots nous permettent de voir où se situe le plus de pays par
+rapport à la quantité de déchets plastique par habitant selon chaque
+continent et comment le nombre de pays est réparti selon la quantité de
+déchets plastiques par habitant qui augmente. On voit une sorte de
+progression que le boxplot ne nous permet pas de voir. Avec ce dernier,
+on peut seulement de voir où se trouve en moyenne les pays et
+l’intervalle auquel ils se situent.
 
 ### Exercise 4
 
